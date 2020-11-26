@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+     
+        <ul class="navbar-nav">
+          
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'asd' %}">hotel_images</a>
+              </li>
+           </ul>
+ </nav>
+      <h1>prohile ...</h1>
+   
+
+<!---====================================================================================================-->
+    <div class="container">
+    
+          
+      
+       <form method = "post" enctype="multipart/form-data"> 
+          
+           {{ form }}
+           
+           <div class="card" style="width:400px">
+               <img class="card-img-top" src="{{ show.photo.url }}" alt="Card image" style="width:100%">
+               <div class="card-body">
+                 <h4 class="card-title">{{ show.name|upper }}</h4>
+                 <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                 <a href="{% url 'forms_html'  show.pk %}" class="btn btn-primary">Update</a>
+               </div>
+             </div>
+         
+       </form>
+     
+</div>
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+

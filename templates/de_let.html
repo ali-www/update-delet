@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+<div class="container ">
+    <div class="row justify-content-center">
+    <div class="card pt-4 pl-5      background-color:rgb(115, 127, 189)!important;    " style="width:400px">
+  
+        
+            <form method = "post" enctype="multipart/form-data" >
+       
+        {% csrf_token %}
+        
+        
+        <div class="card-body ">
+                <p class="card-title ">are you suer you want delet :  {{ de_let }} </p>
+           
+            
+                <button type="submit" class="btn btn-success">delet</button>
+                <a href="{% url 'asd' %}" class="btn btn-success">cancle</a>
+              
+         </div>
+
+
+
+
+       
+      
+    </form>
+</div>
+</div>
+
+ 
+</div>
+        
+{% endblock content %}
+    
+       
+     
+ 
+
+   
+  
+ 
+
+    

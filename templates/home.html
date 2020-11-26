@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    
+     <!---====================================================================================================-->
+
+      <h3  class="breadcrumb-item active card-title" >{{ wkt|date:'l-d-M-Y'  }}</h3>
+    <div class="row justify-content-center mt-4">
+    
+    <a class="breadcrumb-item active card-title "><h1 class="card-title " id="he">hello from html hello </h1></a>
+</div>
+  
+ 
+        <!---====================================================================================================-->
+     
+    <div class="container ">
+        <div class="row justify-content-center">
+        <div class="card pt-4 pl-5      background-color:rgb(115, 127, 189)!important;    " style="width:400px">
+        <form method = "post" enctype="multipart/form-data" >
+           
+                 {% csrf_token %}
+                {{ form.as_p }}
+              
+                <div class="card-body    ">
+                    
+               
+                
+                    <button type="submit" class="btn btn-success">Add</button>
+                  
+                </div>
+           
+          
+        </form>
+    </div>
+ </div>
+
+     
+</div>
+
+   
+  
+ 
+
+    
+{% endblock content %}

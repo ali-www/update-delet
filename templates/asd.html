@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+    
+                
+   
+
+
+    
+    
+    <div class="container-fluid   ">
+        
+        {% for fo in po.all %}
+         
+            
+            <h5>{{ fo.name|upper }}</h5>
+            <img src="{{ fo.photo.url }}" style="width:50%;height:200px"> 
+            <a href="{% url 'show' fo.pk %}">Go In</a> 
+            <a href="{% url 'de_let' fo.pk %}">delet</a> 
+        {% empty %}
+        <p>no thing here  </p>
+        {% endfor %}
+     
+          
+</div>
+
+
+
+{% endblock content %}
